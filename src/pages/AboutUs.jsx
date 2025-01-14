@@ -1,15 +1,13 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from '../componets/Header';
-import Footer from '../componets/Footer';
+
 
 function AboutUs() {
   
   return (
     
-    <div style={{ background: '#fbd66e' }}>
-    <Header/>
-    <section className="container py-5">
+    <div style={{ background: '#fbd66e' ,paddingTop:'100px',paddingBottom:'50px'}}>
+    <section className="container ">
       <div className="row align-items-center">
         {/* Left side: Image */}
         <div className="col-md-6">
@@ -42,7 +40,6 @@ function AboutUs() {
         </div>
       </div>
     </section>
-    <Footer/>
     </div>
   );
 }

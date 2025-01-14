@@ -10,7 +10,18 @@ function Header() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark shadow" style={{ background: '#fbd66e' }}> 
+    <nav 
+      style={{
+        background: '#fbd66e',
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        width: '100%',
+        zIndex: '1000',
+        padding: '10px 0', // Optional, for spacing inside the header
+      }}
+      className="navbar navbar-expand-lg navbar-dark shadow" 
+    > 
       <div className="container">
         {/* Navbar Brand */}
         <Link className="navbar-brand fw-bold fs-3" to="/">
@@ -56,7 +67,7 @@ function Header() {
 
           {/* Search Box and "Fevorts" Text */}
           <form className="d-flex align-items-center ms-auto mt-3 mt-lg-0 gap-3">
-          <span className="text-danger fw-bold fs-5">Fevorts</span>
+            <span className="text-danger fw-bold fs-5">Fevorts</span>
 
             <input
               className="form-control rounded-pill"

@@ -1,12 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from '../componets/Header';
-import Footer from '../componets/Footer';
+
 
 function Landing() {
   return (
     <div>
-      <Header/>
       <div
   className="d-flex flex-column justify-content-center text-white text-center text-sm-start ps-4 ps-md-5 ps-0"
   style={{
@@ -94,7 +92,6 @@ function Landing() {
           </div>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 }

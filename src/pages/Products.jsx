@@ -16,8 +16,6 @@ import milk from "../assets/milk.png";
 import potato from "../assets/pottato.png";
 import rice from "../assets/rise.png";
 import tomato from "../assets/tomato.png";
-import Header from "../componets/Header";
-import Footer from "../componets/Footer";
 
 const ProductCards = () => {
   const products = [
@@ -41,17 +39,19 @@ const ProductCards = () => {
     ));
   };
 
-  return (
-    <div style={{ background: '#fbd66e' }}>
-    <Header/>
-    
   
-      <div className="container my-4" >
+  const handleCreateOrder = (product) => {
+    alert(`Order Successfully for ${product.name}`);
+  };
+
+  return (
+    <div style={{ background: '#fbd66e',paddingTop:'100px' }}>
+      <div className="container">
         {/* Heading */}
         <h1 className="text-center mb-4" style={{ fontWeight: "bold" }}>
           Products
         </h1>
-  
+
         <div className="row">
           {products.map((product) => (
             <div key={product.id} className="col-md-3 mb-4">
@@ -87,14 +87,23 @@ const ProductCards = () => {
                     {product.price}
                   </p>
                   <div>{renderStars(product.stars)}</div>
+                  {/* Create Order Button */}
+                  <div style={{margin:" 0 30px"}}>
+                    <button
+                          className="btn btn-success w-100 mt-3 "
+                          style={{ borderRadius: "20px" ,width:'300px', padding:'8px' }}  // Adjust the value as needed
+                          onClick={() => handleCreateOrder(product)}
+                        >
+                          Create Order
+                        </button>
+                  </div>
+
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-  
-    <Footer/>
     </div>
   );
 };
